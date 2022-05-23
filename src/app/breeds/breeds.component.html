@@ -1,0 +1,23 @@
+
+
+<h2> List Breeds </h2>
+<hr>
+
+<table>
+  <thead>
+    <th>Breed</th>
+    <th>Coat</th>
+    <th>Country</th>
+    <th>Origin</th>
+    <th>pattern</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let detail of breeds">
+   <td><a routerLink="/facts">{{detail.breed}}</a></td>
+    <td><a routerLink="/facts">{{detail.coat}}</a></td>
+    <td><a routerLink="/facts">{{detail.country}}</a></td>
+    <td><a routerLink="/facts">{{detail.origin}}</a></td>
+    <td><a routerLink="/facts">{{detail.pattern}}</a></td>
+  </tr>
+  </tbody>
+</table>

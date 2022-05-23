@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { FactComponent } from './fact/fact.component';
+import { BreedsComponent } from './breeds/breeds.component';
+import { Route, RouterModule } from "@angular/router";
+import { ModuleWithProviders } from '@angular/core';
 
-const routes: Routes = [];
+const APPROUTE: Route[]=  [
+  {path: "", component:BreedsComponent},
+  {path: "facts", component:FactComponent}
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+]
+
+export const Routing: ModuleWithProviders<any>= RouterModule.forRoot(APPROUTE)
